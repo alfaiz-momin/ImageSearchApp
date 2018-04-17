@@ -1,0 +1,32 @@
+.Center{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.search{
+  min-width: 150px;
+  max-width: 50%;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.search-btn-container button{
+  margin-bottom: 5px;
+  width: 80px;
+  padding: 3px;
+}
+
+.card {
+  padding-bottom: 10px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  box-shadow: 4px 4px 10px 2px #a2a5b7;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}

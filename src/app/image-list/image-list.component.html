@@ -1,0 +1,38 @@
+<div class="Center">
+    <mat-form-field class="search">
+      <input matInput color="primary" [(ngModel)]="searchQuery" placeholder="Search image here">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" (click)="searchImages(searchQuery)" type="button">Find Images</button>
+</div>
+<br>
+<div @StaggerAnim class="Center search-btn-container">
+    <button mat-raised-button color="primary" (click)="searchImages('wallpaper')">Wallpaper</button>
+    <button mat-raised-button color="primary" (click)="searchImages('natural')">Natural</button>
+    <button mat-raised-button color="primary" (click)="searchImages('flowers')">Flowers</button>
+    <button mat-raised-button color="primary" (click)="searchImages('vintage')">Vintage</button>
+    <button mat-raised-button color="primary" (click)="searchImages('technology')">Technology</button>
+    <button mat-raised-button color="primary" (click)="searchImages('car')">Car</button>
+</div>
+<br>
+<!-- image search result div start -->
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col-lg-3 col-md-6 col-xs-12" *ngFor='let image of images'>
+
+        <div class="card" style="width: 18rem;">
+          <img src={{image.webformatURL}}>
+          <div class="card-body">
+            <p>Likes: {{image.likes}}</p>
+              <a href={{image.pageURL}} target="_blank"><button mat-raised-button color="primary">Dowunload</button></a>
+          </div>
+        </div><br>
+
+
+      </div>
+
+    </div>
+
+  </div>
